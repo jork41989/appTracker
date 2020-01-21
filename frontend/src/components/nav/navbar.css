@@ -1,0 +1,103 @@
+.navbar-section {
+    display: block;
+    position: relative;
+    background-color: #14181c;
+    z-index: 10;
+}
+
+.logo{
+    margin: 22px 0 0;
+    width: 68px;
+    height: 25px;
+    position: relative;
+    background: url(/sprite.c71fa7b3.svg);
+    background-repeat: no-repeat;
+    background-size: 800px 1000px;
+    background-position: -350px 0px;
+}
+
+.logoText{
+    position: relative;
+    margin: 22px 0 0;
+    float: left;
+    font-size: 24px;
+    color: #fff;
+    font-family:'Graphik Bold';
+}
+
+
+.logoDiv{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    height: 72px;
+    width: 950px;
+    margin: 0 auto;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    float: left;
+    font-size: 1rem;
+    line-height: 17px;
+    text-transform: uppercase;
+    font-family:'Graphik Semibold';
+}
+
+.nav-links button, .profile-link{
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 800;
+    padding-left: 10px;
+    color: #9ab;
+    text-transform: uppercase;
+    font-family: Graphik-Semibold-Web,sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.profile-link{
+    text-decoration: none;
+    margin: 27px;
+}
+
+.nav-links button:focus{
+    outline: none;
+}
+
+.NavDivWidth{
+background-color: #14181c;
+}
+
+.nav-links button:hover, .profile-link{
+    color: #fff;
+}
+
+.nav-Link{
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 800;
+    padding-left: 10px;
+    color: #9ab;
+    text-transform: uppercase;
+    font-family: Graphik-Semibold-Web,sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+}
+
+
+.nav-Link:hover{
+ color: #fff;
+}
