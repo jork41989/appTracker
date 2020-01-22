@@ -78,8 +78,8 @@ class LoginForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     let user = {
-      email: 'opinion@opinion.net',
-      password: 'opinion'
+      email: 'JobSeeker@jobseek.net',
+      password: 'jobseek'
     };
     this.props.login(user).then(this.errorCheck)
   }
