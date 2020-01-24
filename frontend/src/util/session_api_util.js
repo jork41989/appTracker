@@ -9,9 +9,11 @@ export const setAuthToken = token => {
 };
 
 export const signup = (userData) => {
-  return axios.post('/api/users/register', userData);
-}
-
+  return axios.post('/api/users/register', userData)
+    .then((response) => {
+      return response;
+    })
+};
 export const login = (userData) => {
   return axios.post('/api/users/login', userData);
 }

@@ -20,7 +20,6 @@ const App = () => (
     </div>
     <div className={'body'}> 
     <Switch>
-      
     </Switch>
       <Modal />
     </div>

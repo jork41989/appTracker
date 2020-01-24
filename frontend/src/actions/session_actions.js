@@ -27,27 +27,40 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const signup = user => dispatch => (
-  APIUtil.signup(user).then(() => (
-    dispatch(login(user))
-  ), err => (
-    dispatch(receiveErrors(err.response.data))
-  ))
-);
+export const signup = user => dispatch => {
+  return APIUtil.signup(user)
+    .then((data) => (dispatch(receiveUserSignIn(data))))
+    .catch(err => (dispatch(receiveErrors(err.response.data))))
+};
 
-export const login = user => dispatch => {
+// export const login = user => dispatch => {
 
-  return (APIUtil.login(user).then(res => {
-    const { token } = res.data; 
-    localStorage.setItem('jwtToken', token); 
+//   return (APIUtil.login(user).then(res => {
+//     const { token } = res.data; 
+//     localStorage.setItem('jwtToken', token); 
+//     APIUtil.setAuthToken(token);
+//     const decoded = jwt_decode(token);
+//     dispatch(receiveCurrentUser(decoded))
+//   }).then(() => dispatch(getTheCurUser()))
+//     .catch(err => {
+//       dispatch(receiveErrors(err.response.data))
+//     }))
+// }
+
+export const login = user => dispatch => (
+  APIUtil.login(user).then(res => {
+    const {
+      token
+    } = res.data;
+    localStorage.setItem('jwtToken', token);
     APIUtil.setAuthToken(token);
     const decoded = jwt_decode(token);
     dispatch(receiveCurrentUser(decoded))
-  }).then(() => dispatch(getTheCurUser()))
+  })
     .catch(err => {
-      dispatch(receiveErrors(err.response.data))
-    }))
-}
+      dispatch(receiveErrors(err.response.data));
+    })
+)
 
 
 

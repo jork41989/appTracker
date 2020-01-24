@@ -14,9 +14,6 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    let updatedUser;
-    let newU;
-    let newState;
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return {
