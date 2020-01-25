@@ -5,6 +5,8 @@ import merge from 'lodash/merge'
 
 export default (state = {}, action) => {
   Object.freeze(state);
+
+  let userId;
   let user;
   let newState;
 
@@ -12,6 +14,7 @@ export default (state = {}, action) => {
 
     case RECEIVE_SINGLE_USER:
       return Object.assign({}, state, { [action.user.data.id]: action.user.data })
+
     default:
       return state;
   }

@@ -16,6 +16,11 @@ export const receiveAUser = user => ({
 
 
 
+export const requestSingleUser = userId => (dispatch) => (
+  getUser(userId).then(user => dispatch(receiveAUser(user)))
+)
+
+
 
 
 export const getTheCurUser = () => (dispatch) => {

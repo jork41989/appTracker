@@ -1,5 +1,5 @@
 .signup-login-bg{
-  background-color: #4774a1;
+  background-color: #263646;
   color: #678;
   padding: 90px 100px;
   border-radius: 3px;
@@ -12,7 +12,7 @@
 
 .submit{
     color: #f4fcf0;
-    background: #0035b0;
+    background: #133592;
     box-shadow: inset 0 1px 0 hsla(0,0%,100%,.3);
     letter-spacing: .075em;
     height: 28px;

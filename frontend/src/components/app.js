@@ -9,19 +9,18 @@ import Modal from './modal/modal';
 
 
 
-
-
 // import SettingsContainer from './profile/settings_container';
 
 const App = () => (
   <div className={'mainDiv'}>
     <div className={'NavDivWidth'}>
-      <NavBarContainer />
+    <NavBarContainer />
     </div>
     <div className={'body'}> 
     <Switch>
+
     </Switch>
-      <Modal />
+    <Modal />
     </div>
   </div>
 );

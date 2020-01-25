@@ -44,25 +44,14 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     let user = {
       email: this.state.email,
-      username: this.state.username,
+     username: this.state.username,
       password: this.state.password,
       password2: this.state.password2
     };
-    //email: check@check.com
-    //password: check123
-    const userData = Object.assign({}, user);
-    this.props.signup(userData).then((res) => {
-      //async logs user in when they signed in
-      if ( res.data && res.data.status === 200) {
-        this.props.login({
-          email: this.state.email,
-          password: this.state.password
-        });
-      }
-    }); 
+
+    this.props.signup(user, this.props.history); 
     
   }
 
