@@ -17,7 +17,8 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  jobs: [{type: Schema.Types.ObjectId, ref: 'job'}]
 })
 
 const User = mongoose.model('users', UserSchema);
