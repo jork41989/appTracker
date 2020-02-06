@@ -20,4 +20,4 @@ class JobForm extends React.Component {
   }
 }
 
-export default JobsForm
+export default JobForm
