@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
+import JobFromContainer from '../job-form/job_form_container'
 
 
 
@@ -22,6 +23,9 @@ function Modal ({payload, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'addjob':
+      component = <JobFromContainer />;
+      break
     default:
       return null;
   }
