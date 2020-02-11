@@ -27,7 +27,7 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
           <div className="nav-links">
-            
+            <button onClick={() => this.props.openModal({ modal: 'addjob' })}>Log Application</button>
               <button onClick={this.logoutUser}>Logout</button>
               <p>{this.props.currentUser.username}</p>
             

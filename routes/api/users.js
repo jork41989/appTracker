@@ -111,16 +111,17 @@ router.post('/login', (req, res) => {
 router.get('/:user_id', (req, res) => {
   User.findById(req.params.user_id)
   
-    
+    .then(user => {
     res.json({
      
       username: user.username,
       id: user.id
-    })
+    })})
+
     .catch(err => 
       res.status(404).json({nomoviesfound: 'no movies found for this user'}))
     });
-
+  
 
 
 
